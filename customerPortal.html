@@ -35,9 +35,12 @@
     </style>
 </head>
 <body>
-    <script>
-      console.log("WINDOW :: ", window);
-    </script>
+  <script>
+    function onMyFrameLoad() {
+        console.log("onload");
+               alert(window.frames[0].document.cookie);
+           };
+  </script>
     <div class="header">
       <p style="align-self: center;">Customer Portal 2.0 IFrame Embedded</p>
     </div>
@@ -49,7 +52,7 @@
         height="800px"
         width="100%"
         frameBorder="0"
-        sandbox="allow-same-origin allow-scripts allow-top-navigation"
+        onload="onMyFrameLoad(this)"
       >
       </iframe>
     </div>
