@@ -35,7 +35,20 @@
     </style>
 </head>
 <body>
-    <div class="header">
+  <script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById('myFormButton').click();
+    });
+  </script>
+  <form name="myForm" 
+              action="http://localhost:3000/"
+              method="post" enctype="multipart/form-data">
+                <!-- <input name=${
+                  camDetails.is_abckam ? "abckamauth" : "idogcamauth"
+                } hidden="" value="${camDetails?.auth}"> -->
+                <input id="myFormButton" hidden type="submit" name="subpopup" >
+              </form>
+    <!-- <div class="header">
       <p style="align-self: center;">Customer Portal 2.0 IFrame Embedded</p>
     </div>
     <div class="container">
@@ -48,6 +61,6 @@
       >
       </iframe>
     </div>
-    <div class="footer"></div>
+    <div class="footer"></div> -->
 </body>
 </html>
